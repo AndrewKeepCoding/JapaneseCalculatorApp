@@ -5,25 +5,26 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:ex="using:WinUIEx"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="using:JapaneseCalculatorApp.Views"
     mc:Ignorable="d">
 
     <Grid RowDefinitions="32,Auto">
-        <!--App Title Bar-->
-        <Grid
-            x:Name="AppTitleBar"
+        <!--  App Title Bar  -->
+        <Grid x:Name="AppTitleBar"
             Grid.Row="0"
             ColumnDefinitions="Auto,*">
             <SymbolIcon
                 Grid.Column="0"
                 Margin="10,0,0,0"
                 HorizontalAlignment="Left"
-                Symbol="Calculator"/>
-            <TextBlock
-                x:Name="AppTitleBarText"
+                Symbol="Calculator" />
+            <TextBlock x:Name="AppTitleBarText"
                 Grid.Column="1"
                 Margin="10,0,0,0"
-                VerticalAlignment="Center"/>
+                VerticalAlignment="Center" />
         </Grid>
+        <!--  App Body  -->
+        <views:MainPage Grid.Row="1" />
     </Grid>
 
 </ex:WindowEx>
