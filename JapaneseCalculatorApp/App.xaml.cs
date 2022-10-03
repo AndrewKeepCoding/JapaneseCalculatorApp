@@ -1,18 +1,22 @@
-﻿using Microsoft.UI.Xaml;
+using JapaneseCalculatorApp.Views;
+using Microsoft.UI.Xaml;
+using WinUIEx;
 
 namespace JapaneseCalculatorApp;
 public partial class App : Application
 {
-    private Window? m_window;
+    private WindowEx? window;
 
     public App()
     {
-        this.InitializeComponent();
+        InitializeComponent();
     }
 
     protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
     {
-        m_window = new MainWindow();
-        m_window.Activate();
+        this.window = new MainWindow();
+        this.window.Activate();
+        this.window.SetWindowSize(1000, 800);
+        this.window.SetIsResizable(false);
     }
 }
