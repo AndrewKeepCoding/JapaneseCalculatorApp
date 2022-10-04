@@ -1,20 +1,13 @@
-<Page
-    x:Class="JapaneseCalculatorApp.Views.MainPage"
+<UserControl
+    x:Class="JapaneseCalculatorApp.Views.VerticalTextBlock"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:JapaneseCalculatorApp.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
 
     <Grid>
-        <local:CalculatorButton
-            Text="1"
-            Width="200"
-            Height="200"
-            FontSize="200"
-            ButtonMargin="45"
-            TextMargin="30"/>
+        <StackPanel x:Name="StackPanel" />
     </Grid>
-</Page>
+</UserControl>
