@@ -16,6 +16,7 @@
     <None Remove="Assets\kouzanmouhitsu.ttf" />
     <None Remove="Views\CalculatorButton.xaml" />
     <None Remove="Views\MainPage.xaml" />
+    <None Remove="Views\Styles.xaml" />
     <None Remove="Views\VerticalTextBlock.xaml" />
   </ItemGroup>
 
@@ -43,6 +44,11 @@
        package has not yet been restored -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnablePreviewMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\VerticalTextBlock.xaml">
