@@ -13,6 +13,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Assets\kouzanmouhitsu.ttf" />
     <None Remove="Views\CalculatorButton.xaml" />
     <None Remove="Views\MainPage.xaml" />
     <None Remove="Views\VerticalTextBlock.xaml" />
