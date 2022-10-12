@@ -12,4 +12,8 @@
         <Setter Property="FontSize" Value="40" />
     </Style>
 
+    <Style TargetType="local:CalculatorButton">
+        <Setter Property="FontFamily" Value="{StaticResource CustomFont}" />
+    </Style>
+
 </ResourceDictionary>

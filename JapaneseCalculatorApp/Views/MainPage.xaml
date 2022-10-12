@@ -10,11 +10,11 @@
 
     <Grid>
         <local:CalculatorButton
-            Text="1"
             Width="200"
             Height="200"
-            FontSize="200"
             ButtonMargin="45"
-            TextMargin="30"/>
+            FontSize="200"
+            Text="1"
+            TextMargin="30" />
     </Grid>
 </Page>
