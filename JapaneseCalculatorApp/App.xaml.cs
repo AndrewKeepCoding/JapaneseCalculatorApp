@@ -24,7 +24,7 @@ public partial class App : Application
     {
         this.window = new MainWindow();
         this.window.Activate();
-        this.window.SetWindowSize(1000, 800);
+        this.window.SetWindowSize(1000, 700);
         this.window.SetIsResizable(false);
     }
 

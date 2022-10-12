@@ -8,7 +8,7 @@
     xmlns:views="using:JapaneseCalculatorApp.Views"
     mc:Ignorable="d">
 
-    <Grid RowDefinitions="32,Auto">
+    <Grid RowDefinitions="32,*">
         <!--  App Title Bar  -->
         <Grid x:Name="AppTitleBar"
             Grid.Row="0"

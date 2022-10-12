@@ -1,3 +1,4 @@
+using AK.Toolkit.WinUI3.GridIndexer;
 using JapaneseCalculatorApp.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.UI.Xaml.Controls;
@@ -10,6 +11,7 @@ public sealed partial class MainPage : Page
     {
         InitializeComponent();
         ViewModel = App.Current.Services.GetRequiredService<MainPageViewModel>();
+        GridIndexer.RunGridIndexer(Content);
     }
 
     public MainPageViewModel ViewModel { get; }
