@@ -5,4 +5,11 @@
 
     <FontFamily x:Key="CustomFont">ms-appx:///Assets/kouzanmouhitsu.ttf#衡山毛筆フォント</FontFamily>
 
+    <Style x:Key="TitleBarTextStyle"
+        TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource CustomFont}" />
+        <Setter Property="FontWeight" Value="ExtraBold" />
+        <Setter Property="FontSize" Value="40" />
+    </Style>
+
 </ResourceDictionary>
