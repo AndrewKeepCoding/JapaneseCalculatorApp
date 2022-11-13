@@ -4,21 +4,34 @@
     xmlns:local="using:JapaneseCalculatorApp.Views">
 
     <FontFamily x:Key="CustomFont">ms-appx:///Assets/kouzanmouhitsu.ttf#衡山毛筆フォント</FontFamily>
-
+    <Color x:Key="OperatorColor">DarkGray</Color>
     <Style x:Key="TitleBarTextStyle"
         TargetType="TextBlock">
         <Setter Property="FontFamily" Value="{StaticResource CustomFont}" />
         <Setter Property="FontWeight" Value="ExtraBold" />
         <Setter Property="FontSize" Value="40" />
     </Style>
-
+    <Style
+        x:Key="DefaultTextStyle"
+        TargetType="TextBlock">
+        <Setter Property="FontSize" Value="50" />
+        <Setter Property="FontFamily" Value="{StaticResource CustomFont}" />
+    </Style>
     <Style TargetType="local:CalculatorButton">
         <Setter Property="FontFamily" Value="{StaticResource CustomFont}" />
         <Setter Property="FontSize" Value="50"/>
-
         <Setter Property="Margin" Value="10"/>
         <Setter Property="ButtonMargin" Value="45"/>
         
     </Style>
-
+    <Style
+        x:Key="OperatorButton"
+        TargetType="local:CalculatorButton">
+        <Setter Property="Foreground" Value="DarkGray" />
+        <Setter Property="TextMargin" Value="30" />
+    </Style>
+    <Style TargetType="local:VerticalTextBlock">
+        <Setter Property="FontSize" Value="50" />
+        <Setter Property="FontFamily" Value="{StaticResource CustomFont}" />
+    </Style>
 </ResourceDictionary>

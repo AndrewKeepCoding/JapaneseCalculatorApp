@@ -106,6 +106,72 @@ public partial class Calculator
 
     public void ProcessCommand(Commands command) => CommandActions[command]();
 
+    public bool CanAppendOperator()
+    {
+        return
+            Result.Length is 0 &&
+            FirstOperand.IsEmpty() is not true &&
+            SecondOperand.IsEmpty() is true;
+    }
+
+    public bool CanCalculate()
+    {
+        return
+            SecondOperand.IsEmpty() is not true &&
+            Operator is not Operators.None &&
+            FirstOperand.IsEmpty() is not true;
+    }
+
+    public bool CanAppendPoint()
+    {
+        return
+            Result.Length is 0 &&
+            (Operator is not Operators.None && SecondOperand.CanAppendPoint() is true) ||
+            (Operator is Operators.None && FirstOperand.CanAppendPoint() is true);
+    }
+
+    public bool CanChangeSign()
+    {
+        return
+            Result.Length is 0 &&
+            (Operator is not Operators.None && SecondOperand.CanChangeSign() is true) ||
+            (Operator is Operators.None && FirstOperand.CanChangeSign() is true);
+    }
+
+    public bool CanBackSpace()
+    {
+        return
+            Result.Length > 0 ||
+            SecondOperand.IsEmpty() is not true ||
+            FirstOperand.IsEmpty() is not true;
+    }
+
+    public bool CanAllClear()
+    {
+        return
+            Result.Length > 0 ||
+            SecondOperand.IsEmpty() is not true ||
+            FirstOperand.IsEmpty() is not true;
+    }
+
+    private static double GetNumber(IEnumerable<Numerics> elements)
+    {
+        string numbersString = string.Empty;
+
+        foreach (int element in elements.Select(v => (int)v))
+        {
+            numbersString += element switch
+            {
+                < 10 => element.ToString(),
+                10 => ".",
+                11 => "-",
+                _ => throw new NotImplementedException($"{element}"),
+            };
+        }
+
+        return double.Parse(numbersString);
+    }
+
     private static double Calculate(double firstOperand, Operators @operator, double secondOperand)
     {
         return (firstOperand, @operator, secondOperand) switch

@@ -1,3 +1,4 @@
+using JapaneseCalculatorApp.Core;
 using JapaneseCalculatorApp.ViewModels;
 using JapaneseCalculatorApp.Views;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,6 +33,7 @@ public partial class App : Application
     {
         return new ServiceCollection()
             .AddSingleton<MainPageViewModel>()
+            .AddSingleton<JapaneseCalculator>()
             .BuildServiceProvider();
     }
 }

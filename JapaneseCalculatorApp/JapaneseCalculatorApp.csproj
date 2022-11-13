@@ -47,6 +47,9 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JapaneseCalculatorApp.Core\JapaneseCalculatorApp.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Views\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
